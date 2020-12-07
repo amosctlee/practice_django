@@ -1,0 +1,9 @@
+{% extends 'article_base.html' %}
+
+{% block content %}
+<div>
+    {% for article in object_list  %}
+        <p>{{ article.pk }} - <a href={{ article.get_absolute_url }}>{{ article.content }}</a></p>
+    {% endfor %}
+</div>
+{% endblock %}

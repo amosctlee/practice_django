@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>about</h1>
+
+<p>
+    {{ my_text }}
+    <br />
+    {{ my_number }}
+    <br />
+</p>
+{{my_html|striptags|slugify}}
+<ul>
+    {% for item in my_list %}
+        {% if True  %}
+            <li>{{forloop.counter}} - {{item|add:22}}</li>
+        {% elif True %}
+            <li>this is not the network</li>
+        {% else %}
+            <li>this is not the network</li>
+        {% endif %}
+
+    {% endfor %}
+</ul>
+
+{% endblock %}
